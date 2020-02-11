@@ -14,7 +14,11 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-
+/**
+ * 描述：加载网络图片的类
+ *
+ * @author coder-pig： 2016/08/05 14:34
+ */
 public class PictureLoader {
     private ImageView loadImg;
     private String imgUrl;
@@ -58,7 +62,7 @@ public class PictureLoader {
                     InputStream in = conn.getInputStream();
                     ByteArrayOutputStream out = new ByteArrayOutputStream();
                     byte[] bytes = new byte[1024];
-                    int length = -1;
+                    int length;
                     while ((length = in.read(bytes)) != -1) {
                         out.write(bytes, 0, length);
                     }
